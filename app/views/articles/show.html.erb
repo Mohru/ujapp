@@ -7,6 +7,9 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+<p>
+  <%= link_to "Edit", edit_article_path(@article)%>
+</p>
 
 <h2>Comments</h2>
 <%= render @article.comments %>
