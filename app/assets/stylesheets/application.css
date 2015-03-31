@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body{
+      background: radial-gradient(#336600, #295200, black);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: "Segoe UI", sans-serif;
+      color: white; 
+    } 
