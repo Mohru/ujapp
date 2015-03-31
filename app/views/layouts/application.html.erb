@@ -8,8 +8,8 @@
 </head>
 <body>
   <div id="flash">
-    <% flash[:notice] if flash[:notice] %>
-    <% flash[:alert] if flash[:alert] %>
+    <%= flash[:notice] if flash[:notice] %>
+    <%= flash[:alert] if flash[:alert] %>
   </div>
   
   <% if user_signed_in?%>
@@ -22,7 +22,7 @@
     <%= link_to "Sing in", new_user_session_path %>
   <% end %>
   
-<%= yield %>
+<%= yield %> <!-- w tym miejscu dodaje sie widok konkretnej strony -->
 
 </body>
 </html>
