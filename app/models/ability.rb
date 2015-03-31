@@ -10,6 +10,7 @@ class Ability
          can :update, Article
        else
          can :read, :all
+         can :create, Comment
          cannot :update, Article
        end
     #
