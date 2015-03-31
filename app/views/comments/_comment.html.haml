@@ -1,8 +1,8 @@
+%span.avatar.anonymous
+  %i.fa.fa-user
+  %strong= comment.commenter
+  = comment.created_at
 %p
-  %strong Commenter:
-  = comment.commenter
-%p
-  %strong Comment:
   = comment.body
 %p
   - if can? :destroy, comment

@@ -1,9 +1,8 @@
-%p
-  %strong Title:
-  = @article.title
-%p
-  %strong Text:
-  = @article.text
+%div{:style => "text-align: center"}
+  %p
+    %h2= @article.title
+  %p
+    = @article.text
 %p
   - if can? :update, Article
     = link_to "Edit", edit_article_path(@article)
