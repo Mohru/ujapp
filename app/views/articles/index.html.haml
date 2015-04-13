@@ -3,21 +3,22 @@
 %h3
   = link_to 'New article', new_article_path
   
-.row
-  - @articles.reverse.each do |article|
-    .col-xs-6.col-lg-4
-      %h2= link_to article.title, article_path(article)
-      %h6 
-        written at: 
-        = article.created_at
+.container-fluid
+  .row
+    - @articles.reverse.each do |article|
+      .col-xs-12.col-sm-6.col-md-4
+        %h2= link_to article.title, article_path(article)
+        %h6.small 
+          written at: 
+          = article.created_at
           
-      %tr
-        %td
-          - if can? :update, @article
-            = link_to "Edit", edit_article_path(article)
-        %td{:style => "padding: 0 5px"}
-          - if can? :destroy, Article
-            = link_to "Delete", article_path(article), |
-              method: :delete,                         |
-              data: {confirm: 'Are you sure?'}         |
+        %tr
+          %td
+            - if can? :update, @article
+              = link_to "Edit", edit_article_path(article)
+          %td{:style => "padding: 0 5px"}
+            - if can? :destroy, Article
+              = link_to "Delete", article_path(article), |
+                method: :delete,                         |
+                data: {confirm: 'Are you sure?'}         |
 %br/
