@@ -6,7 +6,12 @@ class User < ActiveRecord::Base
   
   def  full_name
     "#{first_name} #{last_name}"
-    [first_name, last_name].join(" ")
+    #[first_name, last_name].join(" ")
+  end
+  
+  def initials
+    first_name[0]+last_name[0]
+    #"#{first_name.first}#{last_name.first}"
   end
   
 end
