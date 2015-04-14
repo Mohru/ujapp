@@ -47,5 +47,6 @@ group :development, :test do
   gem "haml-rails", "~> 0.9"
   gem 'rspec'
   gem 'rspec-rails', '~>3.0'
+  gem 'shoulda-matchers'
 end
 
