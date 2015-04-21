@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe ArticlesController do
-  before :each @article=create(:article)
+  before :each do
+    @article=create(:article)
+  end
   
   describe 'index' do
     it 'returns articles list' do
@@ -19,7 +21,7 @@ describe ArticlesController do
       
       expect(response).to have_http_status(:success)
       expect(assigns(:article)).not_to eq nil
-      expect(assigns(:articles).title).to eq @article.title
+      expect(assigns(:article).title).to eq @article.title
     end
   end
 end
