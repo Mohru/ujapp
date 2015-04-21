@@ -5,7 +5,7 @@ feature 'home page' do
     it 'user sees home page' do
       visit '/'
       
-      expect(page). to have_content('Welcome!')
+      expect(page).to have_content('Welcome!')
     end
   end
 end
