@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'article' do
+feature 'articles' do
   before :each do
     @article=create(:article)
     @second_article=create(:article)
