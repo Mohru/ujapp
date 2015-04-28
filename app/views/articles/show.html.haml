@@ -3,6 +3,10 @@
     %h2= @article.title
   %p
     = @article.text
+    %br
+    %br
+    <!--%strong Picture: -->
+    =image_tag @article.picture.url(:medium)
 %p
   - if can? :update, Article
     = link_to "Edit", edit_article_path(@article)
